@@ -3,11 +3,10 @@
 ; and export to
 ; arturo
 
-loop 
-list relative "src" 'f 
+loop list relative "src" 'f 
 [
     x: read.json f
     filename: extract.filename f
     write append append 
-        "data/" filename ".art" as.pretty.code x
+                 "data/" filename ".art" as.pretty.code x
 ]
